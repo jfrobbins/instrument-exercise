@@ -76,12 +76,15 @@ These assignments guide you from basic programming to controlling the power supp
 - **Goal**: Show off everything you’ve learned with a real hardware test.
 - **Hardware Setup**:
   - Connect a 100Ω resistor between the positive and negative terminals of channel 1 on the Rigol DP832A.
+    - Perhaps using a box like [this](https://www.amazon.com/gp/product/B0D8T5XJS9/ref=ox_sc_act_title_4?smid=A1GMZO8N77UCMQ&psc=1)
+    - or [this](https://www.amazon.com/gp/product/B0002KX76M/ref=ox_sc_act_title_3?smid=ATVPDKIKX0DER&psc=1)
   - Turn on the power supply and enable channel 1.
 - **Program Steps**:
   - Connect to the power supply.
   - Set channel 1 to 5V.
   - Read and print the voltage and current.
-  - Check that the current is about 50mA (since I = V / R = 5V / 100Ω = 0.05A).
+  - Check that the current is about 50mA (since `I = V / R` = `5V / 100Ω = 0.05A`).
+    - `V=IR` 
 - **Hint**: Call your implemented methods and use `Console.WriteLine` to display results.
 
 ## Additional Resources
