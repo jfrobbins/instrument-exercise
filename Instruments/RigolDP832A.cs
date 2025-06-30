@@ -1,6 +1,6 @@
-using RigolDP832AControl.Interfaces;
+using InstrumentsExercise.Interfaces;
 
-namespace RigolDP832AControl.Instruments
+namespace InstrumentsExercise.Instruments
 {
     public class RigolDP832A : VisaInstrument, IDCSupply
     {

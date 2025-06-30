@@ -1,4 +1,4 @@
-namespace RigolDP832AControl.Interfaces
+namespace InstrumentsExercise.Interfaces
 {
     public interface IDCSupply : IInstrument
     {

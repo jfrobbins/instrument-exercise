@@ -1,8 +1,8 @@
 using System;
-using RigolDP832AControl.Interfaces;
-using RigolDP832AControl.Instruments;
+using InstrumentsExercise.Interfaces;
+using InstrumentsExercise.Instruments;
 
-namespace RigolDP832AControl
+namespace InstrumentsExercise
 {
     class Program
     {
