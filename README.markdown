@@ -1,6 +1,7 @@
-# Rigol DP832A Control Project
+# Instruments Control Project
 
-This project is designed for educational purposes to teach programming concepts through controlling a Rigol DP832A Programmable Linear DC Power Supply using C# and .NET. It’s perfect for someone new to programming who wants to learn by building a real-world application.
+This project is designed for educational purposes to teach programming concepts through controlling a Rigol DP832A Programmable Linear DC Power Supply using C# and .NET. 
+It’s perfect for someone new to programming who wants to learn by building a real-world application.
 
 ## Overview
 
@@ -14,17 +15,41 @@ In this project, you will learn how to:
 The repository provides a blank shell program that compiles and runs. Your task is to complete it step-by-step through the assignments below.
 
 ## Getting Started
+Here's a github primer that may be useful:
+- https://github.com/skills/introduction-to-github
+And the official github documentation is quite good:
+- https://education.github.com/experiences/intro_to_github
+
+### Repository Structure
+```
+instruments-exercise/
+├── README.md
+├── instruments-exercise.sln
+├── InstrumentsExercise/
+│   ├── Interfaces/
+│   │   ├── IInstrument.cs
+│   │   └── IDCSupply.cs
+│   ├── Instruments/
+│   │   ├── VisaInstrument.cs
+│   │   └── RigolDP832A.cs
+│   └── Program.cs
+```
 
 ### Prerequisites
+- [C# Coding Guidelines](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
 - [.NET SDK](https://dotnet.microsoft.com/download) installed (version 6.0 or later recommended).
 - A code editor like [Visual Studio](https://visualstudio.microsoft.com/) (Community edition is free) or [Visual Studio Code](https://code.visualstudio.com/).
 - [National Instruments VISA](https://www.ni.com/en-us/support/downloads/drivers/download.ni-visa.html) installed for instrument communication.
+  - This is a library that handles the bulk of communication with instruments
+  - The [NI-VISA Readme](https://www.ni.com/docs/en-US/bundle/ni-visa/page/user-manual-welcome.html) has a lot of good information, _and examples!_ Check out the "VISA Overview" section.
 - A Rigol DP832A power supply connected via USB or Ethernet (for the final assignment).
+- FYI: **Namespace**: The namespace is `InstrumentsExercise`, Sub-namespaces for interfaces and instruments will be `InstrumentsExercise.Interfaces` and `InstrumentsExercise.Instruments`.
 
 ### Setting Up the Project
 1. **Clone the Repository**: Download this repository to your computer.
-2. **Open the Solution**: Open `RigolDP832AControl.sln` in your code editor.
+2. **Open the Solution**: Open `instruments-exercise.sln` in your code editor.
 3. **Add VISA Reference**: Ensure the National Instruments VISA library is installed. You may need to add a reference to `NationalInstruments.Visa` in the project (instructions in your editor’s documentation).
+    - See [HowToAddNIVisaReference.markdown](./HowToAddNIVisaReference.markdown)
 4. **Build and Run**: Build the solution and run it. You should see "Hello, World!" in the console.
 
 ## Assignments
