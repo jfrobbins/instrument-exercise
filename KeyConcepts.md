@@ -70,7 +70,7 @@ When communicating with hardware, various errors can occur, such as connection f
 - **Why It Matters**: Understanding Ohm's Law is essential for setting up and verifying your hardware tests. It helps you predict expected measurements and ensures your setup is correct.
 - **In the Project**: In the final assignment, you'll set a voltage on the power supply and measure the current through a resistor. Using Ohm's Law, you can verify if the measured current matches the expected value (e.g., for a 100Ω resistor at 5V, `I = 5 / 100 = 0.05A`).
 - **Example**: Ohm's Law is like a formula for understanding how electricity flows. It helps you predict what should happen in your circuit and verify if your measurements make sense.
-- **Further Reading**: [Ohm's Law](https://www.khanacademy.org/science/physics/circuits-topic/circuits-resistance/a/ohms-law)
+- **Further Reading**: [Ohm's Law](https://en.wikipedia.org/wiki/Ohm's_law)
 
 ---
 

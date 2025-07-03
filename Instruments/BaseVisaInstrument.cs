@@ -9,22 +9,22 @@ namespace InstrumentsExercise.Instruments
 {
     public abstract class BaseVisaInstrument : IInstrument
     {
+        public int TimeoutMs { get; protected set; }
+        public IMessageBasedSession VisaSession { get; protected set; }
+        
         // constructor:
         protected BaseVisaInstrument(string connectionString, int timeoutMs)
         {
             this.TimeoutMs = timeoutMs;
             IMessageBasedSession h = Connect(connectionString);
         }
-
-        protected abstract IMessageBasedSession Connect(string connectionString);
-
-        public int TimeoutMs { get; set; }
-        protected IMessageBasedSession VisaSession { get; set; }
-
-        IMessageBasedSession IInstrument.VisaSession
+        
+        protected internal IMessageBasedSession Connect(string connectionString)
         {
-            get => VisaSession;
-            set => VisaSession = value;
+            IVisaSession h = GlobalResourceManager.Open(connectionString, AccessModes.None, this.TimeoutMs);
+            h.TimeoutMilliseconds = this.TimeoutMs;
+            this.VisaSession = h as IMessageBasedSession ?? throw new InvalidOperationException($"Cannot connect to instrument: {connectionString}");
+            return this.VisaSession;
         }
 
 

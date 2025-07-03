@@ -10,6 +10,8 @@ namespace InstrumentsExercise
         {
             Console.WriteLine("Hello, World!");
             // TODO: Create a RigolDP832A instance and control the power supply
+
+
         }
     }
 }

@@ -6,4 +6,5 @@ namespace InstrumentsExercise.Instruments
     {
         // TODO: Implement IDCSupply methods using SCPI commands
     }
+
 }
